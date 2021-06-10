@@ -4,7 +4,7 @@ A GET attack using the Beautiful Soup (bs4) package in Python 3.
 **USAGE:** Run this command in terminal:
 
 ```python
-python bs4DoSTool.py https://URLOfTheWebsite
+python bs4DoSTool.py URLOfTheWebsite(with HTTP / HTTPS)
 ```
 
 **Note:** Use it with VPN / WHONIX for 'anonymity'.
