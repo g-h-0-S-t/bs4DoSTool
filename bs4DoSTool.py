@@ -28,7 +28,7 @@
 import sys
 import urllib.request
 from bs4 import BeautifulSoup
-from urllib.request import Request, urlopen
+from urllib.request import Request
 
 ############################################################################################################################
 # Pass URL and keep requesting it
