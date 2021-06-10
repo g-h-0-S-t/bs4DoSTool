@@ -1,12 +1,7 @@
 # bs4DoSTool
 A GET attack using the Beautiful Soup (bs4) package in Python 3.
 
-**USAGE:** Run this command in terminal:
-
-```python
-python bs4DoSTool.py URLOfTheWebsite(with HTTP / HTTPS)
-```
-**Example:** 
+**Usage Example:** 
 ```python
 python bs4DoSTool.py https://google.com
 ```
