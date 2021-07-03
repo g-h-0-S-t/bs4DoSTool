@@ -6,7 +6,8 @@ A GET attack using the Beautiful Soup (bs4) package in Python 3.
 # use these syntaxes to receive 200 response code
 python bs4DoSTool.py https://google.com
 python bs4DoSTool.py https://google.com false
-# use this syntax to receive 400 response code (i.e., making use of bad requests to try overwhelming a server)
+# use this syntax to receive 400 response code
+# (i.e., making use of bad requests to try overwhelming a server)
 python bs4DoSTool.py https://google.com true
 ```
 **Tips:**
