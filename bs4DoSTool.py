@@ -33,8 +33,8 @@ from urllib.request import Request
 ############################################################################################################################
 # Pass URL and keep requesting it
 ############################################################################################################################
-URL = str(sys.argv[1])
 print(str(sys.argv))
+URL = str(sys.argv[1])
 UAStr = 'We are Anonymous. We are Legion. We do not forgive. We do not forget. Expect us.'
 useBadRequest = str(sys.argv[2]) if len(sys.argv) > 2 else 'false'
 if useBadRequest == 'true':
