@@ -18,6 +18,6 @@ python bs4DoSTool.py https://google.com true
 
 (1) Use it with VPN / WHONIX for 'anonymity'. Support is provided for TOR / VPN connection resets.
 
-(2) Run it in multiple terminals. ;) 
+(2) Run it in multiple terminals. Once with true flag, once with false flag. Combine it with https://github.com/g-h-0-S-t/Nuke .
 
 **IMPORTANT:** THIS SOFTWARE IS PROVIDED FOR EDUCATIONAL USE ONLY! IF YOU ENGAGE IN ANY ILLEGAL ACTIVITY THE AUTHOR DOES NOT TAKE ANY RESPONSIBILITY FOR IT. BY USING THIS SOFTWARE YOU AGREE WITH THESE TERMS.
