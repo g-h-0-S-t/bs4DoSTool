@@ -36,7 +36,7 @@ from urllib.request import Request
 URL = str(sys.argv[1])
 print(str(sys.argv))
 UAStr = 'We are Anonymous. We are Legion. We do not forgive. We do not forget. Expect us.'
-useBadRequest = str(sys.argv[2]) if len(sys.argv) > 3 else 'false'
+useBadRequest = str(sys.argv[2]) if len(sys.argv) > 2 else 'false'
 if useBadRequest == 'true':
 	# Bad Request : Below loop is for HTTP Code 400
 	for _ in list(range(13)):
