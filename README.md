@@ -12,7 +12,7 @@ python bs4DoSTool.py https://google.com true
 ```
 **Tips:**
 
-(1) Use it with VPN / WHONIX for 'anonymity'.
+(1) Use it with VPN / WHONIX for 'anonymity'. Support is provided for TOR / VPN connection resets.
 
 (2) Run it in multiple terminals. ;) 
 
