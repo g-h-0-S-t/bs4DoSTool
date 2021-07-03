@@ -3,19 +3,16 @@ A GET attack using the Beautiful Soup (bs4) package in Python 3.
 
 **Usage Example:** 
 ```python
+# use these syntaxes to receive 200 response code
 python bs4DoSTool.py https://google.com
+python bs4DoSTool.py https://google.com false
+# use this syntax to receive 400 response code (i.e., making use of bad requests to try overwhelming a server)
+python bs4DoSTool.py https://google.com true => use this syntax to receive 400 response code
 ```
 **Tips:**
 
 (1) Use it with VPN / WHONIX for 'anonymity'.
 
 (2) Run it in multiple terminals. ;) 
-
-(3) A cute DDoS tip -> Randomize UA.
-
-E.g., UA+=UA for 10000000 times, then concat it with 'counter' and pass it to UA.
-You'll have dynamic UAs with huge data.
-Might overwhelm a small server after few hits.
-Throw in a VPN with dynamic location switch.
 
 **IMPORTANT:** THIS SOFTWARE IS PROVIDED FOR EDUCATIONAL USE ONLY! IF YOU ENGAGE IN ANY ILLEGAL ACTIVITY THE AUTHOR DOES NOT TAKE ANY RESPONSIBILITY FOR IT. BY USING THIS SOFTWARE YOU AGREE WITH THESE TERMS.
