@@ -22,7 +22,7 @@ Stack Overflow crashes have been resolved.
 
 (2) Run it in multiple terminals.  
 Once with true flag, once with false flag.  
-Combine it with https://github.com/g-h-0-S-t/Nuke .
+Combine it with https://github.com/g-h-0-S-t/Nuke and https://github.com/g-h-0-S-t/InfiniteBonks .
 
 **IMPORTANT:**  
 THIS SOFTWARE IS PROVIDED FOR EDUCATIONAL USE ONLY!  
