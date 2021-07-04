@@ -20,6 +20,8 @@ python bs4DoSTool.py https://google.com true
 Support is provided for TOR (in WHONIX) / VPN connection resets.  
 Stack Overflow crashes have been resolved.
 
-(2) Run it in multiple terminals. Once with true flag, once with false flag. Combine it with https://github.com/g-h-0-S-t/Nuke .
+(2) Run it in multiple terminals.  
+Once with true flag, once with false flag.  
+Combine it with https://github.com/g-h-0-S-t/Nuke .
 
 **IMPORTANT:** THIS SOFTWARE IS PROVIDED FOR EDUCATIONAL USE ONLY! IF YOU ENGAGE IN ANY ILLEGAL ACTIVITY THE AUTHOR DOES NOT TAKE ANY RESPONSIBILITY FOR IT. BY USING THIS SOFTWARE YOU AGREE WITH THESE TERMS.
